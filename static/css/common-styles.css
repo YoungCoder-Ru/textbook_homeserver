@@ -1,0 +1,282 @@
+﻿:root {
+	--main_blue: #2a8eab;
+	--yellow_accent: #ffbf00;
+	--red_accent: #ac462a;
+	--green_accent: #4fac2a;
+
+
+	--background_page: #e1e1e1;
+	--background_article: #fafafa;
+	--background_code: #ededed;
+	--background_notabene: #cee3f6;
+	--background_blockquote: #eee;
+	--background_header_wrapper: var(--main_blue);
+	--background_footer_wrapper: var(--main_blue);
+
+	--text_color: #333;
+	--text_white_color: #e8e8e8;
+	--text_blue_color: var(--main_blue);
+	--text_link_color: #2590d4;
+
+	--separator: #ccc;
+
+	--size_change_menu_mode: 740px;
+}
+
+
+
+@font-face{
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-style: normal;
+	src: local('Open Sans'), url(../fonts/OpenSans/OpenSans-Light.ttf);
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-style: normal;
+	src: local('Open Sans'), url(../fonts/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	font-weight: 500;
+	font-style: normal;
+	src: local('Open Sans'), url(../fonts/OpenSans/OpenSans-Medium.ttf);
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	font-weight: 600;
+	font-style: normal;
+	src: local('Open Sans'), url(../fonts/OpenSans/OpenSans-SemiBold.ttf);
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	font-weight: 700;
+	font-style: normal;
+	src: local('Open Sans'), url(../fonts/OpenSans/OpenSans-Bold.ttf);
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	font-family: Open Sans;
+	background: var(--background_page);
+	color: var(--text_color);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/*
+ * Структура страницы
+ */
+
+.Content {
+	display: flex;
+	width: 90%;
+	max-width: 1280px;
+	flex-direction: row;
+	background: var(--background_article);
+	margin: 80px auto 0;
+	font-size: 16px;
+	line-height: 24px;
+	flex-grow: 1;
+	box-sizing: border-box !important;
+
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1100px;
+	flex-grow: 1;
+	margin: 0 auto;
+	box-sizing: border-box !important;
+	min-width: 0 !important;
+}
+
+.sidebar--right {
+	width: 340px;
+	min-width: 340px;
+	font-size: .9em;
+	padding: 0 10px 0 15px;
+	box-sizing: border-box !important;
+}
+
+.wrapper .breadNav {
+	box-sizing: border-box;
+	padding: 15px 10px 0;
+	font-size: .9em;
+}
+
+.wrapper .announcementBlock {
+	border: 7px solid var(--green_accent);
+	box-sizing: border-box;
+	margin: 15px auto;
+	padding: 15px;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+
+/*
+ *	Подвал страницы
+ */
+footer {
+	color: var(--text_white_color);
+	background: var(--background_footer_wrapper);
+	padding-top: 15px;
+}
+
+footer a {
+	display: inline-block;
+	color: var(--text_white_color);
+	text-decoration: underline;
+	margin: 0;
+}
+
+.FooterLinks {
+	margin: 0 auto;
+	max-width: 1280px;
+	margin-bottom: 35px;
+	list-style: none;
+}
+
+.FooterLinks li {
+	display: block;
+	height: 1.5em;
+	line-height: 1.5em;
+}
+
+.FooterLinks a {
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.FooterSign {
+	text-align: center;
+	font-size: .9em;
+	padding-bottom: 1em;
+}
+
+
+/*
+ *	Общие стили для всех страниц
+*/
+
+a {
+	text-decoration: none;
+	color: var(--text_link_color);
+}
+
+article {
+	box-sizing: border-box;
+	padding: 0 10px 0 20px;
+	border: 1px solid var(--background_article);
+	width: 100%;
+}
+
+article h1,h2 {
+	text-align: center;
+	color: var(--main_blue);
+	font-weight: 500;
+}
+
+.articleImage {
+	text-align: center;
+	width: 95%;
+	max-width: 750px;
+	margin: 15px auto;
+}
+
+.articleImage img {
+	max-width: 100%;
+}
+
+
+/*
+ *  Донаты
+ */
+
+ .donationPanel {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.donation {
+	margin: 15px 0 30px 0;
+	width: 45%;
+	max-width: 480px;
+	min-width: 280px;
+	box-sizing: border-box;
+}
+
+.donation--sidebar{
+    min-width: 315px;
+	margin-bottom: 15px;
+}
+
+.donation__titleLine {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.donation__username {
+	font-size: 1.1em;
+	color: var(--text_blue_color);
+	margin-bottom: 7px;
+	margin-right: 15px;
+}
+
+.donation__value {
+	font-weight: bold;
+	color: var(--text_color);
+}
+
+.donation__comment {
+	font-style: italic;
+	margin: 0 0 10px;
+}
+
+.donation__answer {
+	color: var(--red_accent);
+	font-weight: 600;
+}
+
+
+/*
+ *	Стили для медиа-запросов
+ */
+
+ @media all and (max-width: 925px) {
+
+	.Content {
+		width: 100%;
+		flex-direction: column !important;
+	}
+
+	.sidebar--right {
+		width: 100%;
+		padding-left: 10px;
+	}
+
+	article {
+		padding-left: 10px;
+	}
+
+}
+
+@media all and (max-width: 740px) {
+	.Content {
+		width: 100%;
+		margin: 46px auto 0;
+	}
+}

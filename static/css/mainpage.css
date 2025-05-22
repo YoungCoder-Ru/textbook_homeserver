@@ -1,0 +1,96 @@
+﻿.linkBtn {
+	display: block;
+	width: 310px;
+	height: 45px;
+	line-height: 45px;
+	margin: 20px auto;
+	text-align: center;
+	cursor: pointer;
+	color: var(--text_white_color) !important;
+	background: var(--main_blue);
+}
+
+.HeaderBlock {
+	width: 100%;
+	height: 450px;
+	background: var(--background_header_wrapper);
+	color: var(--text_white_color);
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.4em;
+	line-height: 1.7em;
+	font-stretch: ultra-expanded;
+}
+
+.HeaderBlock_logo {
+	width: 90%;
+	max-width: 700px;
+}
+
+.HeaderBlock_linkBtn {
+	background-color: var(--yellow_accent);
+	color: var(--text_color) !important;
+}
+
+.MainPageContentWrapper {
+	width: 100%;
+	background: var(--background_article);
+}
+
+.MainPageContent {
+	max-width: 1100px;
+	margin: 0 auto;
+	box-sizing: border-box !important;
+	background: var(--background_article);
+}
+
+.MainPageContent h1, h2 {
+	font-weight: 500;
+	font-size: 1.5em;
+	color: var(--text_blue_color);
+	text-align: center;
+}
+
+
+.MainPageContent p {
+	text-align: justify;
+}
+
+.MainPageContent li {
+	list-style-type: none;
+	margin: 10px auto;
+}
+
+.MainPageContent li:before {
+	content: " — ";
+}
+
+.MainPageContent a {
+	text-decoration: none;
+	color: var(--text_link_color);
+}
+
+.FutureBlock {
+	display: flex;
+	width: 100%;
+	margin: 20px auto;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.FutureBlock_item {
+	font-size: .9em;
+	width: 270px;
+	margin: 15px;
+	padding: 15px;
+	min-height: 250px;
+	border: 1px solid var(--separator);
+}
+
+.FutureBlock_item h3 {
+	font-size: 1.2em;
+	font-weight: 600;
+	text-align: center;
+	color: var(--text_blue_color);
+}

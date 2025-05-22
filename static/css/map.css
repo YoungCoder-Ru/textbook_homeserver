@@ -1,0 +1,59 @@
+/* Карта обучения */
+
+.mapList {
+	max-width: 1100px;
+	margin: 20px auto 0;
+}
+
+.mapList li {
+	list-style-type: none !important; /* Убираем нумерацию */
+}
+
+.mapList ol {
+	padding: 0;
+	counter-reset: list1; /* Инициируем счётчик */
+}
+
+.mapList ol li::before {
+	counter-increment: list1; /* Увеличиваем значение счетчика */
+	content: counter(list1) ". "; /* Выводим значение типа 1., 2. и т. д.*/
+	visibility: hidden; /* Делаем число пункта невидимым */
+	font-size: 0; /* Убираем занимаемое числом место */
+}
+
+.mapList ol ol {
+	counter-reset: list2; /* Инициируем счётчик вложенного списка */
+}
+
+.mapList ol ol li::before {
+	counter-increment: list2; /* Увеличиваем значение счётчика */
+	content: counter(list1) "." counter(list2) " "; /* Выводим значение типа 2.1, 2.2 и т. д. */
+	/* К нумерации подпунктов применяются стили пунктов — убираем их: */
+	visibility: visible;
+	font-size: 0.9em;
+	margin-right: 10px;
+	display: block;
+}
+
+.mapList_lessonTitle {
+	font-size: 1.2em;
+	font-weight: 600;
+	color: var(--text_color);
+	margin-bottom: 15px;
+}
+
+.mapList_lessonContent {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	margin-top: 10px;
+	margin-bottom: 35px;
+}
+
+.mapList_lessonContent_item {
+	width: 330px !important;
+	margin: 5px 20px 10px 0 !important;
+	display: flex;
+	flex-wrap: nowrap;
+}
+

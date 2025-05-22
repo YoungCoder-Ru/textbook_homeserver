@@ -1,0 +1,31 @@
+.tasksBlock {
+	display: flex;
+	width: 98%;
+	margin: 10px auto;
+	padding: 0;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+ol.tasksBlock {
+	padding: 0;
+	counter-reset: list1;
+}
+
+ol.tasksBlock li {
+	list-style-type: none !important;
+	background: var(--background_article);
+	width: 320px;
+	min-height: 70px;
+	margin: 5px 25px 20px 0;
+}
+
+ol.tasksBlock li::before {
+	counter-increment: list1; 
+	content: counter(list1) ". "; 
+}
+
+.tasksBlock a {
+	font-weight: 500;
+}

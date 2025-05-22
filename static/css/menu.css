@@ -1,0 +1,136 @@
+.mainMenu {
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+	width: 100%;
+	z-index: 9;
+	top: 0;
+	position: fixed;
+	opacity: .9;
+}
+
+.mainMenu__toggleBtn {
+	margin: 0;
+	color: var(--text_white_color);
+	cursor: pointer;
+	line-height: 30px;
+	padding: 8px;
+	border: 0;
+	background-color: var(--background_header_wrapper);
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.toggleBtn__icon {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	position: relative;
+  }
+  
+  .toggleBtn__icon span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	border-radius: 2px;
+	background-color: var(--text_white_color);
+	margin-top: 5px;
+  }
+
+.mainMenu__toggleBtn:focus {
+	outline: none;
+}
+
+.mainMenu__items {
+	display: none;
+	flex: 1;
+	flex-direction: column;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.mainMenu__items--visible {
+	display: flex;
+}
+
+.mainMenu__logo {
+	display: none;
+}
+
+.mainMenu__link {
+	padding: 8px;
+	display: block;
+	text-decoration: none;
+	line-height: 30px;
+	color: var(--text_white_color);
+}
+
+.mainMenu__item {
+	background-color: var(--background_header_wrapper);
+	border-bottom: solid 1px var(--separator);
+}
+
+.mainMenu__item:last-child {
+	border-bottom: 0;
+}
+
+@media all and (max-width: 925px) {
+	.mainMenu__items {
+		font-size: 0.8em;
+	}
+}
+
+
+@media all and (min-width: 740px) {
+	.mainMenu {
+		flex-direction: row;
+	}
+
+	.mainMenu__toggleBtn {
+		display: none;
+		font-size: 1em;
+	}
+
+	.mainMenu__items {
+		height: 80px;
+		display: flex;
+		flex-direction: row;
+		background: var(--background_header_wrapper);
+		margin: 0;
+		padding: 0;
+	}
+
+	.mainMenu__logo {
+		display: block;
+		flex: 1;
+		max-width: 120px;
+		background: var(--background_header_wrapper);
+		margin-right: 4px;
+		border-bottom: none;
+	}
+
+	.mainMenu__link {
+		padding: 0;
+		line-height: 80px;
+		height: 80px;
+	}
+
+	.mainMenu__link img {
+		vertical-align: middle;
+	}
+
+	.mainMenu__item {
+		flex: 1;
+		max-width: 170px;
+		background: var(--background_header_wrapper);
+		margin-right: 4px;
+		border-bottom: none;
+	}
+
+	.mainMenu__item:hover {
+		border-bottom: 2px solid var(--separator);
+		color: var(--text-color);
+	}
+}
