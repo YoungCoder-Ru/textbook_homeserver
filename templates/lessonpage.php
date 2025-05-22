@@ -17,9 +17,9 @@
             $version = filemtime($path);
             echo '<link rel="stylesheet" href="' . $style . '?v=' . $version . '">'."\n\t";
         }
-    ?>
     
-    <?php include 'partials/meta.php'; ?>
+        include 'partials/meta.php'; 
+    ?>
     
     <script src="/static/js/highlightjs/highlight.min.js"></script>
     <script src="/static/js/highlightjs/languages/c.min.js"></script>
@@ -44,7 +44,6 @@
         !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);
     </script>
     <?php } ?>
-
 </head>
 <body>
     <?php include 'partials/menu.php'; ?>
