@@ -7,7 +7,6 @@
  * 
  */
 ?>
-
 <header>
 <nav class="mainMenu">
     <button id="toggleBtn" class="mainMenu__toggleBtn">

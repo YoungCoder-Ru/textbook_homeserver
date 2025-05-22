@@ -19,9 +19,9 @@
             $version = filemtime($path);
             echo '<link rel="stylesheet" href="' . $style . '?v=' . $version . '">' ."\n\t";
         }
+    
+        include 'partials/meta.php';
     ?>
-
-    <?php include 'partials/meta.php'; ?>
 </head>
 <body>
         
