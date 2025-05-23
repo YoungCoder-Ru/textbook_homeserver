@@ -7,7 +7,8 @@ $dotenv->load();
 
 define('SITE_URL', $_ENV['SITE_URL']);
 
-$pages = json_decode($_ENV['PAGES'], true);
+define('PAGES', json_decode($_ENV['PAGES'], true));
+
 define('MENU_ITEMS', array_filter([
     ['name'=> 'blog', 'url' => 'https://blog.youngcoder.ru', 'text' => 'Блог'],
     ['name'=> 'how-to-learn', 'url' => '/how-to-learn.php', 'text' => 'Как&nbsp;учиться?'],
@@ -16,8 +17,8 @@ define('MENU_ITEMS', array_filter([
     ['name'=> 'donate', 'url' => '/donate.php', 'text' => 'Ваша&nbsp;поддержка'],
     ['name'=> 'team', 'url' => '/team.php', 'text' => 'Команда'],
     ['name'=> 'about', 'url' => '/about.php', 'text' => 'О&nbsp;проекте'],
-], function($item) use ($pages) {
-    return in_array($item['name'], $pages);
+], function($item){
+    return in_array($item['name'], PAGES);
 }));
 
 $blocks = json_decode($_ENV['BLOCKS'], true);
@@ -46,7 +47,7 @@ $required_modules = [
 
 $modules = [];
 
-foreach ($pages as $page) {
+foreach (PAGES as $page) {
     if (isset($required_modules['pages'][$page])) {
         $modules = array_merge($modules, $required_modules['pages'][$page]);
     }
