@@ -22,7 +22,7 @@
 }
 
 .mapList ol ol {
-	counter-reset: list2; /* Инициируем счётчик вложенного списка */
+	counter-reset: list2 -1; /* Инициируем счётчик вложенного списка */
 }
 
 .mapList ol ol li::before {

@@ -9,17 +9,19 @@
             '/static/css/common-styles.css',
             '/static/css/map.css',
             '/static/css/menu.css',
-            '/site_static/css/team.css',
             '/static/css/tasks.css',
             '/static/css/donation.css',
             '/static/css/mainpage.css'
         ];
+        if (in_array('team', PAGES)) {
+            $styles[] = '/site_static/css/team.css';
+        }
         foreach ($styles as $style) {
             $path = __DIR__ . "/.." . $style;
             $version = filemtime($path);
             echo '<link rel="stylesheet" href="' . $style . '?v=' . $version . '">' ."\n\t";
         }
-    
+        
         include 'partials/meta.php';
     ?>
 </head>
