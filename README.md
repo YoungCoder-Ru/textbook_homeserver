@@ -18,7 +18,7 @@ git clone git@github.com:YoungCoder-Ru/textbook_homeserver.git .
 4. У файла `.env.example` удалить `.example`.
 5. Открыть файл .env для редактирования и в параметре SITE_URL указать название вашего локального сайта. Сейчас там `http://yc-textbook.ru`
 
-6. Выполнить команду `composer install
+6. Выполнить команду `composer install`
 
 После выполнения этих шагов у вас должна быть примерно следующая структура файлов и папков:
 
