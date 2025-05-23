@@ -3,6 +3,7 @@
 	margin: 0 auto;
 	text-align: center;
 }
+
 .lessonShareButtons > div {
 
 }
@@ -105,10 +106,9 @@ a.lessonNavigationLinks__item:hover {
 	color: var(--text_color);
 }
 
-
-.adsBlock__right {
-	width: 100%;
+.lessonGitHubEditLink {
 	max-width: 320px;
+	margin: 0 auto 25px;
 	text-align: center;
 }
 
@@ -177,6 +177,10 @@ a.lessonNavigationLinks__item:hover {
 	}
 
 	.lessonShareButtons {
+		margin: 15px auto !important;
+	}
+
+	.lessonGitHubEditLink {
 		margin: 15px auto !important;
 	}
 }

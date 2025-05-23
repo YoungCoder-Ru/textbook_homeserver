@@ -117,7 +117,8 @@ function get_lesson_contents(int $lesson_number, array $articles, string $sitepa
 		$contents[$article_name] = [
 			"title" => $metadata['title'],
 			"link" => $sitepath.$link,
-			"name" => $article_name
+			"name" => $article_name,
+            'folder' => $article_folder
 		];
 	}
 

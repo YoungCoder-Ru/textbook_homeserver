@@ -126,12 +126,33 @@
                     }  ?>
                 </div>
 
+                <?php 
+                    foreach ($lesson_contents as $key => $item){                        
+                        $github_prefix_link = "https://github.com/YoungCoder-Ru/youngcoder.ru/tree/main/$course/$lesson";
+                        $github_link = '';
+                        if($article == $item['name']){
+                            $github_link = $github_prefix_link . '/' . $item['folder'];
+                            break;
+                        }
+                    }
+
+                    if ($github_link == ''){
+                        $github_link = $github_prefix_link . '/' . 'index.md';
+                    }
+                ?>
+                
+                <div class="lessonGitHubEditLink">
+                    <a href="<?= $github_link; ?>">Редактировать статью на GitHub</a>
+                </div>
+
+
                 <?php if (in_array('share_buttons', BLOCKS)) { ?>
                     <div class="lessonShareButtons">
                         <script src="https://yastatic.net/share2/share.js"></script>
                         <div class="ya-share2" data-curtain data-size="m" data-services="telegram,vkontakte,odnoklassniki,lj"></div>
                     </div>
                 <?php } ?>
+                
             </div>
         </div>
     </div>

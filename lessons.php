@@ -192,6 +192,7 @@ try {
         ),
         'article' => $article_info['is_index'] ? '' : explode('__', $article_info['current_dir'], 2)[1],
         'lesson' => $lesson_number,
+        'course' => $course_name,
         'donations' => in_array('last_donations', BLOCKS) ? get_last_donations($con) : false,
     ];
 
