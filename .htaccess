@@ -1,0 +1,32 @@
+AddCharset utf-8 .php .html .js
+AddDefaultCharset off
+
+# запрещаем выдачу листинга
+Options -Indexes 
+
+RewriteEngine On
+RewriteBase /
+
+# перенаправление старых версий страниц на новые
+RewriteRule ^lessons/2/komp_arifm\.pdf$ /materials/lang_c/2/1__tipy_dannyh/komp_arifm.pdf [R=301,L]
+RewriteRule ^lessons/2/5/ege6-2\.pdf$ /materials/lang_c/5/0__algorithm/ege6-2.pdf [R=301,L]
+RewriteRule ^lessons/2/5/answers_ege_polykov\.pdf$ /materials/lang_c/5/0__algorithm/answers_ege_polykov.pdf [R=301,L]
+
+RewriteRule ^lessons/1/ide/pelles_c/sozdat_proekt\.php$ /lessons/ide/1/pelles_c_project [R=301,L]
+RewriteRule ^lessons/1/ide/pelles_c/osnovy_pellesc\.php$ /lessons/ide/1/pelles_c_basics [R=301,L]
+RewriteRule ^lessons/1/ide/pelles_c/$ /lessons/ide/1/ [R=301,L]
+RewriteRule ^lessons/1/ide/pelles_c/index\.php$ /lessons/ide/1/ [R=301,L]
+
+RewriteRule ^lessons/1/ide/code_blocks/osnovy\.php$ /lessons/ide/2/code_blocks_basics [R=301,L]
+RewriteRule ^lessons/1/ide/code_blocks/sozdat_proekt\.php$ /lessons/ide/2/code_blocks_project [R=301,L]
+RewriteRule ^lessons/1/ide/code_blocks/$ /lessons/ide/2/ [R=301,L]
+RewriteRule ^lessons/1/ide/code_blocks/index\.php$ /lessons/ide/2/ [R=301,L]
+
+
+RewriteCond %{REQUEST_URI} ^/lessons/(.+)\.php$ [NC]
+RewriteRule ^lessons/(.*)\.php$ /lessons/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)lessons/([a-z0-9_]+)/([a-z0-9_]+)/(.*)$ $1lessons.php?course=$2&lesson=$3&article=$4 [L]
+RewriteRule ^(.*)lessons/([0-9]+)/(.*)$ $1lessons.php?lesson=$2&article=$3 [L]
+
