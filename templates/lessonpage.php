@@ -44,6 +44,29 @@
         !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);
     </script>
     <?php } ?>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Уроки",
+                "item": "<?= htmlspecialchars(SITE_URL . '/lessons/') ?>"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "<?= htmlspecialchars($article_title) ?>",
+                "item": "<?= htmlspecialchars(SITE_URL . $_SERVER['REQUEST_URI']) ?>"
+            }
+        ]
+    }
+    </script>
+</head>
+
 </head>
 <body>
     <?php include 'partials/menu.php'; ?>
@@ -51,7 +74,7 @@
     <div class="Content">
         <div class="wrapper">
             <div class="breadNav">
-                    <a href="/#map">Уроки</a>
+                    <a href="/lessons/">Уроки</a> 
                         &gt; <?php echo $article_title; ?>
             </div>
 
