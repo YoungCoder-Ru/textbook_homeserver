@@ -7,6 +7,8 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^lessons/$ /map.php [L]
+
 # перенаправление старых версий страниц на новые
 RewriteRule ^lessons/2/komp_arifm\.pdf$ /materials/lang_c/2/1__tipy_dannyh/komp_arifm.pdf [R=301,L]
 RewriteRule ^lessons/2/5/ege6-2\.pdf$ /materials/lang_c/5/0__algorithm/ege6-2.pdf [R=301,L]
