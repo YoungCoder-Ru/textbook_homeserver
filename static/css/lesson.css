@@ -86,9 +86,10 @@ a.lessonNavigationLinks__item:hover {
 	color: var(--main_blue);
 }
 
-.sidebar_linkButton {
+.donateButton {
 	display: block;
 	width: 220px;
+	border-radius: 4px;
 	box-sizing: border-box;
 	height: 42px;
 	line-height: 42px;
@@ -97,10 +98,10 @@ a.lessonNavigationLinks__item:hover {
 	background: var(--main_blue);
 	color: var(--text_white_color);
 	font-weight: 500;
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 
-.sidebar_linkButton:hover {
+.donateButton:hover {
 	background: var(--yellow_accent);
 	cursor: pointer !important;
 	color: var(--text_color);

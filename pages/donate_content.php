@@ -28,7 +28,7 @@
 
         <p>Если есть желание вознаградить наши труды, вот реквизиты:</br>
             <ul>
-                <li>карта ВТБ: <strong>2200 2407 5852 3167</strong>
+                <li>карта ВТБ: <strong>2200 2418 5059 2936</strong>
                 <li>YooMoney (РФ и СНГ, рубли):<a href="https://yoomoney.ru/to/41001388269088"> <strong>41001388269088</strong></a>
                 <li>WebMoney (все страны): <strong>Z127414214571</strong>
             </ul>
