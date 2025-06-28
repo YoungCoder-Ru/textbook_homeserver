@@ -72,7 +72,9 @@
         <h4>Сбор на материально-техническое обеспечение сайта на 2026 год</h4>
 
         <?php
-            $donated = 985;
+            require_once __DIR__ . '/../config/db_config.php';
+            include __DIR__ . '/../api/donations/donations_handlers.php';
+            $donated = get_total_donations_in_rub($con);
             $goal = 9576;
             $percent = $goal > 0 ? round($donated / $goal * 100) : 0;
         ?>
