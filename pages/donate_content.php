@@ -72,21 +72,28 @@
         <h4>Сбор на материально-техническое обеспечение сайта на 2026 год</h4>
 
         <?php
+
+        if (in_array('database', MODULES)) {
             require_once __DIR__ . '/../config/db_config.php';
+        }
+        if (in_array('donations', MODULES) && in_array('database', MODULES)) {
             include __DIR__ . '/../api/donations/donations_handlers.php';
             $donated = get_total_donations_in_rub($con);
             $goal = 9576;
             $percent = $goal > 0 ? round($donated / $goal * 100) : 0;
         ?>
 
-        <div class="donationProgressWrapper">
-            <div class="donationProgressBarBg">
-                <div class="donationProgressBar" style="width:<?= $percent ?>%"></div>
+            <div class="donationProgressWrapper">
+                <div class="donationProgressBarBg">
+                    <div class="donationProgressBar" style="width:<?= $percent ?>%"></div>
+                </div>
+                <div class="donationProgressText">
+                    <b><?= $donated ?></b> из <b><?= $goal ?></b> руб. (<b><?= $percent ?>%</b>)
+                </div>
             </div>
-            <div class="donationProgressText">
-                <b><?= $donated ?></b> из <b><?= $goal ?></b> руб. (<b><?= $percent ?>%</b>)
-            </div>
-        </div>
+        <?php
+        }
+        ?>
 
         <h3>Бонусы для донатеров</h3>
         <div class="donationBonuses">
