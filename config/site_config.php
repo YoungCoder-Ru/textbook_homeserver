@@ -63,4 +63,7 @@ $modules = array_unique($modules);
 
 DEFINE('MODULES', $modules);
 
+define('DONATION_USD_CURRENCY_RATE', 78);
+define('DONATION_EUR_CURRENCY_RATE', 92);
+
 ?>
