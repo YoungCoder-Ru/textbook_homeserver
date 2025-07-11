@@ -69,8 +69,6 @@
             <li>оплата доменного имени (288 руб.)</li>
         </ul>
 
-        <h4>Сбор на материально-техническое обеспечение сайта на 2026 год</h4>
-
         <?php
 
         if (in_array('database', MODULES)) {
@@ -82,7 +80,8 @@
             $goal = 9576;
             $percent = $goal > 0 ? round($donated / $goal * 100) : 0;
         ?>
-
+            
+            <h4>Сбор на материально-техническое обеспечение сайта на 2026 год</h4>
             <div class="donationProgressWrapper">
                 <div class="donationProgressBarBg">
                     <div class="donationProgressBar" style="width:<?= $percent ?>%"></div>
