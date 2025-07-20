@@ -10,7 +10,6 @@ define('SITE_URL', $_ENV['SITE_URL']);
 define('PAGES', json_decode($_ENV['PAGES'], true));
 
 define('MENU_ITEMS', array_filter([
-    ['name'=> 'blog', 'url' => 'https://blog.youngcoder.ru', 'text' => 'Блог'],
     ['name'=> 'how-to-learn', 'url' => '/how-to-learn.php', 'text' => 'Как&nbsp;учиться?'],
     ['name'=> 'map', 'url' => '/map.php', 'text' => 'Карта'],
     ['name'=> 'tasks', 'url' => '/tasks.php', 'text' => 'Задачи'],
