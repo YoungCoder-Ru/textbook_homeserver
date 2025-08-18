@@ -116,7 +116,7 @@ body {
 }
 
 .wrapper .announcementBlock {
-	border: 7px solid var(--green_accent);
+	border: 7px solid var(--main_blue);
 	box-sizing: border-box;
 	margin: 15px auto;
 	padding: 15px;
