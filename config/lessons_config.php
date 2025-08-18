@@ -21,6 +21,7 @@ define('METADATA_FILENAME', 'meta.json');
 define('CACHE_DIRS', [
     'lang_c' => __DIR__ . '/../cache/lessons/',
     'ide' => __DIR__ . '/../cache/ide/',
+    'manuals' => __DIR__ . '/../cache/manuals/',
     'sandbox' => __DIR__ . '/../cache/sandbox/',
 ]);
 
