@@ -10,7 +10,6 @@ define('SITE_URL', $_ENV['SITE_URL']);
 define('PAGES', json_decode($_ENV['PAGES'], true));
 
 define('MENU_ITEMS', array_filter([
-    ['name'=> 'blog', 'url' => 'https://blog.youngcoder.ru', 'text' => 'Блог'],
     ['name'=> 'how-to-learn', 'url' => '/how-to-learn.php', 'text' => 'Как&nbsp;учиться?'],
     ['name'=> 'map', 'url' => '/map.php', 'text' => 'Карта'],
     ['name'=> 'tasks', 'url' => '/tasks.php', 'text' => 'Задачи'],
@@ -63,7 +62,7 @@ $modules = array_unique($modules);
 
 DEFINE('MODULES', $modules);
 
-define('DONATION_USD_CURRENCY_RATE', 78);
+define('DONATION_USD_CURRENCY_RATE', 65);
 define('DONATION_EUR_CURRENCY_RATE', 92);
 
 ?>

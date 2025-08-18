@@ -45,6 +45,8 @@ function get_prev_link_for_index(array $sorted_lessons, int $current_lesson, arr
     $last_article = end($prev_articles);
     if ($course == 'lang_c') {
         return "/lessons/$prev_lesson/" . extract_article_name($last_article);
+    } else if ($course == 'manuals') {
+        return "/manuals/$prev_lesson/" . extract_article_name($last_article);
     } else {
         return "/lessons/$course/$prev_lesson/" . extract_article_name($last_article);
     }
@@ -55,12 +57,16 @@ function get_prev_link_for_article(int $lesson, array $articles, ?int $article_i
         $prev_article = $articles[$article_index - 1];
         if ($course == 'lang_c') {
             return "/lessons/$lesson/" . extract_article_name($prev_article);
+        } else if ($course == 'manuals') {
+            return "/manuals/$lesson/" . extract_article_name($prev_article);
         } else {
             return "/lessons/$course/$lesson/" . extract_article_name($prev_article);
         }
     }
     if ($course == 'lang_c') {
         return "/lessons/$lesson/";
+    } else if ($course == 'manuals') {
+        return "/manuals/$lesson/";
     } else {
         return "/lessons/$course/$lesson/";
     }
@@ -71,6 +77,8 @@ function get_next_link_for_index(int $lesson, array $articles, string $course): 
     $first_article = reset($articles);
     if ($course == 'lang_c') {
         return "/lessons/$lesson/" . extract_article_name($first_article);
+    } else if ($course == 'manuals') {
+        return "/manuals/$lesson/" . extract_article_name($first_article);
     } else {
         return "/lessons/$course/$lesson/" . extract_article_name($first_article);
     }
@@ -81,6 +89,8 @@ function get_next_link_for_article(array $sorted_lessons, int $lesson, array $ar
         $next_article = $articles[$article_index + 1];
         if ($course == 'lang_c') {
             return "/lessons/$lesson/" . extract_article_name($next_article);
+        } else if ($course == 'manuals') {
+            return "/manuals/$lesson/" . extract_article_name($next_article);
         } else {
             return "/lessons/$course/$lesson/" . extract_article_name($next_article);
         }
@@ -93,6 +103,8 @@ function get_next_link_for_article(array $sorted_lessons, int $lesson, array $ar
 
     if ($course == 'lang_c') {
         return "/lessons/$next_lesson/";
+    } else if ($course == 'manuals') {
+        return "/manuals/$next_lesson/";
     } else {
         return "/lessons/$course/$next_lesson/";
     }

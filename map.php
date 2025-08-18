@@ -11,6 +11,7 @@ $keywords_page = 'уроки по программированию, програ
 
 $map_data = prepare_map_data('lang_c');
 $map_data_ide = prepare_map_data('ide');
+$map_data_manuals = prepare_map_data('manuals');
 
 ob_start();
 include 'pages/map_content.php';

@@ -53,8 +53,8 @@
             {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Уроки",
-                "item": "<?= htmlspecialchars(SITE_URL . '/lessons/') ?>"
+                "name": "<?php $course == 'manuals' ? print('Мануалы') : print('Уроки') ?>",
+                "item": "<?php $course == 'manuals' ? print(htmlspecialchars(SITE_URL . '/manuals/')) : print(htmlspecialchars(SITE_URL . '/lessons/')) ?>"
             },
             {
                 "@type": "ListItem",
@@ -74,7 +74,9 @@
     <div class="Content">
         <div class="wrapper">
             <div class="breadNav">
-                    <a href="/lessons/">Уроки</a> 
+                    <a href="<?php $course == 'manuals' ? print('/manuals/') : print('/lessons/') ?>">
+                        <?php $course == 'manuals' ? print('Мануалы') : print('Уроки') ?>
+                    </a> 
                         &gt; <?php echo $article_title; ?>
             </div>
 
