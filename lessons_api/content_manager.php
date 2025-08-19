@@ -117,13 +117,14 @@ function get_lesson_contents(int $lesson_number, array $articles, string $sitepa
         if ($course == 'lang_c') {
             $link = "$lesson_number/$article_name";
         } else if ($course == 'manuals') {
-            $link = "/manuals/$lesson_number/$article_name";
+            $sitepath = str_replace("lessons/", "", $sitepath);
+            $link = $sitepath . "manuals/$lesson_number/$article_name";
         } else {
             $link = "$course/$lesson_number/$article_name";
         }
 		$contents[$article_name] = [
 			"title" => $metadata['title'],
-			"link" => $sitepath.$link,
+			"link" => ($course == 'manuals') ? $link : $sitepath.$link,
 			"name" => $article_name,
             'folder' => $article_folder
 		];
