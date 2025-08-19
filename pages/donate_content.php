@@ -101,10 +101,6 @@
                 <div class="donationBonusTitle">Для всех донатов</div>
                 <div>Упоминание на сайте в разделе <a href="https://youngcoder.ru/team.php">Команда</a> и на <a href="https://stepik.org/lesson/1340735/step/11?unit=1356402">отдельной странице в Stepik</a></div>
             </div>
-            <div class="donationBonusCard">
-                <div class="donationBonusTitle" style="text-decoration: line-through;">от 512 руб.</div>
-                <div style="text-decoration: line-through;">Ранний доступ к тестированию новых задач для курса</div>
-            </div>
         </div>
 
         <p> <b> Внимание! UPD от 27.07.2025.</b><br/> 
