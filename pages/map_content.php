@@ -22,6 +22,13 @@
         <?php
             renderMapList($map_data_ide, 'lessons/ide/');
         ?>
+        
+        <a name="manuals"></a>
+        <h2>Мануалы</h2>
+        <p>В этом разделе расположены дополнительные материалы, посвящённые различным аспектам программирования и языка Си.</p>
+        <?php
+            renderMapList($map_data_manuals, 'manuals/');
+        ?>
 
     </article>
 </div>
