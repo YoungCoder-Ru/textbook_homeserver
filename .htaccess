@@ -8,6 +8,7 @@ RewriteEngine On
 RewriteBase /
 
 RewriteRule ^lessons/$ /map.php [L]
+RewriteRule ^manuals/$ /map.php#manuals [L,NE,R=301]
 
 # перенаправление старых версий страниц на новые
 RewriteRule ^lessons/2/komp_arifm\.pdf$ /materials/lang_c/2/1__tipy_dannyh/komp_arifm.pdf [R=301,L]
@@ -31,4 +32,5 @@ RewriteRule ^lessons/(.*)\.php$ /lessons/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)lessons/([a-z0-9_]+)/([a-z0-9_]+)/(.*)$ $1lessons.php?course=$2&lesson=$3&article=$4 [L]
 RewriteRule ^(.*)lessons/([0-9]+)/(.*)$ $1lessons.php?lesson=$2&article=$3 [L]
+RewriteRule ^(.*)manuals/([0-9]+)/(.*)$ $1lessons.php?course=manuals&lesson=$2&article=$3 [L]
 
