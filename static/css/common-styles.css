@@ -124,6 +124,27 @@ body {
 	text-align: center;
 }
 
+.announcementBlock .donateButton {
+	display: block;
+	width: 220px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	height: 48px;
+	line-height: 48px;
+	margin: 15px auto;
+	text-align: center;
+	background: var(--yellow_accent);
+	color: var(--text_color);
+	font-weight: 500;
+	font-size: 1.1em;
+}
+
+.announcementBlock .donateButton:hover {
+	background: var(--main_blue);
+	cursor: pointer !important;
+	color: var(--text_white_color);
+}
+
 
 /*
  *	Подвал страницы

@@ -25,6 +25,7 @@
 .HeaderBlock_logo {
 	width: 90%;
 	max-width: 700px;
+	margin-top: 15px;
 }
 
 .HeaderBlock_linkBtn {
