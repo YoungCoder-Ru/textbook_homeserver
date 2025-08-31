@@ -10,6 +10,7 @@ $keywords_page = 'Язык Си, C, road map по Си, онлайн-курс С
 
 $map_data = prepare_map_data('lang_c');
 $map_data_ide = prepare_map_data('ide');
+$map_data_manuals = prepare_map_data('manuals');
 
 include 'templates/basepage.php';
 ?>
