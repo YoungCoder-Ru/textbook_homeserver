@@ -35,7 +35,7 @@
     <?php if (in_array('comments', BLOCKS)) { ?>
     <script>
         var remark_config = {
-            host: "https://comments.youngcoder.ru",
+            host: "https://comments.youngcoder.ru:443",
             site_id: "youngcoder_ru",
             locale: "ru",
 			show_rss_subscription: false,
