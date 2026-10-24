@@ -51,7 +51,10 @@
 </script>
 
 <?php
-if (in_array('metrika', BLOCKS)) {
-    include __DIR__ . '/../../site_templates/partials/metrica.php';
-} ?>
+/*
+    if (in_array('metrika', BLOCKS)) {
+        include __DIR__ . '/../../site_templates/partials/metrica.php';
+    }
+*/ 
+?>
     
