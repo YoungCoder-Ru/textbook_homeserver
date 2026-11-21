@@ -266,10 +266,38 @@ p:has(+ .blockCode) {
 
 .blockCode {
 	margin-bottom: 2em;
-	max-width: 100%; /* Ограничивает ширину контейнера */
-	overflow-x: auto;
+	padding-top: 2px;
+	max-width: 100%;
+	background: #282c34;
+	border-radius: 4px;
 }
 
+.blockCode__copy {
+	display: block;
+	width: fit-content;
+	margin: 4px 6px 0 auto;
+	border: 0;
+	border-radius: 3px;
+	padding: 2px 8px;
+	font: inherit;
+	font-size: 12px;
+	line-height: 1.6;
+	color: var(--text_white_color);
+	background: transparent;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.blockCode__copy:hover,
+.blockCode__copy:focus-visible {
+	color: #fff;
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.blockCode__scroll {
+	max-width: 100%;
+	overflow-x: auto;
+}
 
 .blockCode code {
 	display: block;
@@ -279,7 +307,7 @@ p:has(+ .blockCode) {
 }
 
 .blockCode pre {
-	margin-top: 0;
+	margin: 0;
 }
 
 

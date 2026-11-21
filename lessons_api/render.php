@@ -21,7 +21,10 @@ class CustomMarkdown extends GithubMarkdown {
     protected function renderCode($block) {
         $language = isset($block['language']) ? $block['language'] : 'plaintext';
         $code = htmlspecialchars($block['content'], ENT_NOQUOTES, 'UTF-8');
-        return "<div class=\"blockCode\"><pre><code class=\"language-$language\">$code</code></pre></div>";
+        return '<div class="blockCode">'
+            . '<button type="button" class="blockCode__copy">Копировать</button>'
+            . '<div class="blockCode__scroll"><pre><code class="language-' . $language . '">' . $code . '</code></pre></div>'
+            . '</div>';
     }
 
 	protected function renderInlineCode($block) {

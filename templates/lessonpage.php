@@ -30,12 +30,42 @@
             });
             hljs.highlightAll();
         });
+
+        document.addEventListener('click', async (event) => {
+            const button = event.target.closest('.blockCode__copy');
+            if (!button) {
+                return;
+            }
+
+            const block = button.closest('.blockCode');
+            const code = block && block.querySelector('code');
+            if (!code) {
+                return;
+            }
+
+            try {
+                await navigator.clipboard.writeText(code.textContent);
+                showCopyState(button, 'Скопировано');
+            } catch {
+                showCopyState(button, 'Не вышло');
+            }
+        });
+
+        function showCopyState(button, text) {
+            clearTimeout(button._copyTimer);
+            const previous = button.dataset.defaultLabel || button.textContent;
+            button.dataset.defaultLabel = previous;
+            button.textContent = text;
+            button._copyTimer = setTimeout(() => {
+                button.textContent = previous;
+            }, 1500);
+        }
     </script>
 
     <?php if (in_array('comments', BLOCKS)) { ?>
     <script>
         var remark_config = {
-            host: "https://comments.youngcoder.ru",
+            host: "https://comments.youngcoder.ru:443",
             site_id: "youngcoder_ru",
             locale: "ru",
 			show_rss_subscription: false,
